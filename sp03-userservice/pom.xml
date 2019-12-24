@@ -46,6 +46,12 @@
 				spring-cloud-starter-netflix-eureka-client
 			</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>io.pivotal.spring.cloud</groupId>
+			<artifactId>
+				spring-cloud-services-starter-config-client
+			</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -63,6 +69,15 @@
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>Hoxton.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.pivotal.spring.cloud</groupId>
+				<artifactId>
+					spring-cloud-services-dependencies
+				</artifactId>
+				<version>2.1.4.RELEASE</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
