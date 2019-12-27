@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: config-server
+  
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/WindLee05-17/sp-config
+          searchPaths: config
+ rabbitmq:
+    host: 192.168.214.129
+    port: 5672
+    username: admin
+    password: admin
+    
+server:
+  port: 6001
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh      
